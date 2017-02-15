@@ -103,11 +103,11 @@ class Basic extends React.Component {
           resources={resources}
           events={events}
           width={1100}
-          onEventChanged={::this.eventChanged}
-          onEventResized={::this.eventResized}
-          onEventClicked={::this.eventClicked}
-          onCellClicked={::this.cellClicked}
-          onRangeChanged={::this.rangeChanged}
+          onEventChanged={this.eventChanged.bind(this)}
+          onEventResized={this.eventResized.bind(this)}
+          onEventClicked={this.eventClicked.bind(this)}
+          onCellClicked={this.cellClicked.bind(this)}
+          onRangeChanged={this.rangeChanged.bind(this)}
         />
         <br />
         <div className='well' style={{ width: 1100 }}>
